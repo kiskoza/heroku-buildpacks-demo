@@ -4,6 +4,7 @@
   "dependencies": {},
   "scripts": {
     "build": "webpack",
+    "heroku-prebuild": "rustup target add wasm32-unknown-unknown",
     "serve": "rimraf public/packs && webpack-dev-server"
   },
   "engines": {
@@ -12,6 +13,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
+    "@wasm-tool/wasm-pack-plugin": "^1.2.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "js-yaml": "^3.13.1",

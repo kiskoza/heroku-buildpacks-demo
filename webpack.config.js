@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 const WebpackAssetsManifest = require('webpack-assets-manifest');
 const yaml = require('js-yaml');
 
@@ -55,6 +56,11 @@ module.exports = (env, args) => {
         filename: '[name]-[hash].css',
         ignoreOrder: false,
       }),
+      new WasmPackPlugin({
+        crateDirectory: __dirname,
+        extraArgs: "--no-typescript",
+        outDir: "tmp/wasm/pkg"
+      }),
     ],
     devServer: {
       publicPath: `/${publicPath}/`,
@@ -84,5 +90,11 @@ module.exports = (env, args) => {
         },
       ],
     },
+    resolve: {
+      modules: [
+        'node_modules',
+        'tmp/wasm'
+      ]
+    }
   };
 };

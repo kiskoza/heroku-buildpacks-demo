@@ -17,6 +17,7 @@
 /public/assets
 /public/packs
 .byebug_history
+/target
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
