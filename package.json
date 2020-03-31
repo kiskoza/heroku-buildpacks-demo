@@ -5,6 +5,7 @@
   "scripts": {
     "build": "webpack",
     "heroku-prebuild": "rustup target add wasm32-unknown-unknown",
+    "heroku-postbuild": ":",
     "serve": "rimraf public/packs && webpack-dev-server"
   },
   "engines": {
