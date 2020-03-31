@@ -1,0 +1,23 @@
+{
+  "name": "heroku-buildpacks-demo",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "build": "webpack",
+    "serve": "rimraf public/packs && webpack-dev-server"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "js-yaml": "^3.13.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.0",
+    "webpack-assets-manifest": "^3.1.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

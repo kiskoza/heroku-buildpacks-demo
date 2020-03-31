@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+ENV['RAILS_ENV'] ||= 'development'
+ENV['NODE_ENV']  ||= 'development'
+
+Dir.chdir(File.expand_path('..', __dir__)) do
+  Kernel.exec(ENV, 'yarn serve')
+end

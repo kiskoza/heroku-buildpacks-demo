@@ -13,8 +13,9 @@
 !/log/.keep
 !/tmp/.keep
 
-
+/node_modules
 /public/assets
+/public/packs
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.

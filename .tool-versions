@@ -1,2 +1,4 @@
 ruby 2.7.0
 postgres 9.6.15
+nodejs 12.16.1
+yarn 1.16.0
